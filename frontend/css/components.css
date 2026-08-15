@@ -269,8 +269,8 @@ header nav a.btn-nav:hover {
     text-transform: uppercase;
 }
 
-.feature-badge.badge-repair { background: rgba(255, 255, 255, 1); }
-.feature-badge.badge-montage { background: rgba(255, 255, 255, 1); }
+.feature-badge.badge-repair { background: rgba(217, 119, 6, 0.9); }
+.feature-badge.badge-montage { background: rgba(21, 128, 61, 0.9); }
 
 .feature-body {
     padding: 24px;
@@ -424,9 +424,9 @@ header nav a.btn-nav:hover {
     text-transform: uppercase;
 }
 
-.badge-repair { background: #fef3c7; color: #d97706; }
-.badge-cleaning { background: #e0f2fe; color: #0284c7; }
-.badge-montage { background: #dcfce7; color: #15803d; }
+.badge-repair { background: #fef3c7; color: #eeece9; }
+.badge-cleaning { background: #e0f2fe; color: #fafafa; }
+.badge-montage { background: #dcfce7; color: #eff3f1; }
 
 .service-title {
     font-size: 1.3rem;
