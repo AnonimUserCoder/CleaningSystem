@@ -1,37 +1,40 @@
 export function renderPrices() {
     const container = document.createElement('div');
     container.className = 'page-container page-prices';
-    
+
     container.innerHTML = `
-        <h1 class="page-title">Прозрачные цены</h1>
-        <p class="page-subtitle">Фиксированная стоимость без скрытых наценок и переплат.</p>
-        
+        <div class="page-header">
+            <h1 class="page-title">Тарифы и цены</h1>
+            <p class="page-subtitle">Фиксированная стоимость. Никаких скрытых наценок после начала работ.</p>
+        </div>
+
         <div class="prices-grid">
             <div class="price-card">
-                <h3>Экспресс</h3>
+                <h3>Минимум</h3>
                 <div class="price-val">от 2 500 ₽</div>
-                <p>Мелкий монтаж и быстрое обслуживание</p>
+                <p>Для небольших разовых задач и мелкого ремонта.</p>
                 <ul>
-                    <li>✓ Замена смесителей / розеток</li>
-                    <li>✓ Поддерживающая уборка</li>
-                    <li>✓ Выезд в день обращения</li>
+                    <li>✓ Выезд мастера в течение часа</li>
+                    <li>✓ Устранение мелких поломок</li>
+                    <li>✓ Быстрый поддерживающий клининг</li>
                 </ul>
-                <a href="#contacts" class="btn-primary">Заказать</a>
+                <a href="#/contacts" class="btn-primary">Заказать</a>
             </div>
 
             <div class="price-card featured">
                 <div class="popular-badge">Популярно</div>
                 <h3>Комплекс</h3>
-                <div class="price-val">от 7 500 ₽</div>
-                <p>Полный порядок и обновление интерьера</p>
+                <div class="price-val">от 8 000 ₽</div>
+                <p>Оптимальный выбор для обновления интерьера или клининга.</p>
                 <ul>
-                    <li>✓ Генеральная уборка</li>
-                    <li>✓ Косметическая отделка</li>
-                    <li>✓ Проверка коммуникаций</li>
+                    <li>✓ Генеральная уборка помещений</li>
+                    <li>✓ Косметический ремонт комнат</li>
+                    <li>✓ Монтаж оборудования и электрики</li>
                 </ul>
-                <a href="#contacts" class="btn-primary">Заказать</a>
+                <a href="#/contacts" class="btn-primary">Заказать</a>
             </div>
         </div>
     `;
+
     return container;
 }

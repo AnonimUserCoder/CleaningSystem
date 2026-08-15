@@ -32,7 +32,7 @@ export function renderServiceCard(service) {
         <p class="service-desc">${service.description}</p>
         <div class="card-footer">
             <span class="service-price">${service.price}</span>
-            <a href="#contacts" class="btn-card">Заказать</a>
+            <a href="#/contacts" class="btn-card">Заказать</a>
         </div>
     `;
     return card;

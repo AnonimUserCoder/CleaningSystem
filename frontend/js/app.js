@@ -1,25 +1,20 @@
+import { renderHeader, renderFooter } from './components/index.js';
 import { initRouter } from './router.js';
-import { renderHeader } from './components/header.js';
-import { renderFooter } from './components/footer.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('header-container').appendChild(renderHeader());
-    document.getElementById('footer-container').appendChild(renderFooter());
+    const appContainer = document.getElementById('app');
 
+    // Рендерим фиксированную шапку
+    appContainer.appendChild(renderHeader());
+
+    // Контейнер для динамического контента страниц
+    const mainContent = document.createElement('main');
+    mainContent.id = 'main-content';
+    appContainer.appendChild(mainContent);
+
+    // Рендерим подвал
+    appContainer.appendChild(renderFooter());
+
+    // Инициализируем роутер
     initRouter();
-
-    // Функция для подсветки активной ссылки
-    const updateActiveLink = () => {
-        const hash = window.location.hash || '#home';
-        const links = document.querySelectorAll('header nav a');
-        links.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === hash || (hash === '#home' && link.getAttribute('href') === '#')) {
-                link.classList.add('active');
-            }
-        });
-    };
-
-    window.addEventListener('hashchange', updateActiveLink);
-    updateActiveLink(); // Вызвать один раз при загрузке
 });

@@ -1,33 +1,36 @@
 export function renderPortfolio() {
     const container = document.createElement('div');
     container.className = 'page-container page-portfolio';
-    
+
     container.innerHTML = `
-        <h1 class="page-title">Наши работы</h1>
-        <p class="page-subtitle">Реальные примеры выполненных заказов по ремонту, клинингу и монтажу.</p>
-        
+        <div class="page-header">
+            <h1 class="page-title">Выполненные объекты</h1>
+            <p class="page-subtitle">Реальные кейсы нашей команды с подробным описанием задач.</p>
+        </div>
+
         <div class="portfolio-grid">
             <div class="portfolio-card">
-                <div class="portfolio-tag">Клининг</div>
-                <h3>Генеральная уборка квартиры 85м²</h3>
-                <p>Устранили пыль после черновых работ, отмыли панорамное остекление и сантехнику.</p>
-                <div class="portfolio-meta">⏱ Время: 6 часов</div>
+                <span class="portfolio-tag">Клининг</span>
+                <h3>Генеральная уборка квартиры 85 м²</h3>
+                <p>Устранили въевшиеся загрязнения после аренды, провели химчистку мягкой мебели и отмыли панорамное остекление.</p>
+                <div class="portfolio-meta">⏱ Срок выполнения: 6 часов</div>
             </div>
 
             <div class="portfolio-card">
-                <div class="portfolio-tag">Ремонт</div>
-                <h3>Косметический ремонт гостиной</h3>
-                <p>Шпаклевка стен, поклейка дизайнерских обоев, укладка кварцвинила и монтаж плинтусов.</p>
-                <div class="portfolio-meta">⏱ Время: 4 дня</div>
+                <span class="portfolio-tag">Ремонт</span>
+                <h3>Косметическая отделка гостиной</h3>
+                <p>Выравнивание стен, поклейка флизелиновых обоев, укладка кварцвинила и монтаж напольных плинтусов.</p>
+                <div class="portfolio-meta">⏱ Срок выполнения: 4 дня</div>
             </div>
 
             <div class="portfolio-card">
-                <div class="portfolio-tag">Монтаж</div>
-                <h3>Установка комплекта сантехники</h3>
-                <p>Монтаж инсталляции, подвесного унитаза, смесителей и подключение стиральной машины.</p>
-                <div class="portfolio-meta">⏱ Время: 5 часов</div>
+                <span class="portfolio-tag">Монтаж</span>
+                <h3>Замена сантехники в новостройке</h3>
+                <p>Установка инсталляции, подключение подвесного унитаза, смесителей, гигиенического душа и водонагревателя.</p>
+                <div class="portfolio-meta">⏱ Срок выполнения: 1 день</div>
             </div>
         </div>
     `;
+
     return container;
 }
