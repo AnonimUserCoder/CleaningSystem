@@ -269,8 +269,8 @@ header nav a.btn-nav:hover {
     text-transform: uppercase;
 }
 
-.feature-badge.badge-repair { background: rgba(217, 119, 6, 0.9); }
-.feature-badge.badge-montage { background: rgba(21, 128, 61, 0.9); }
+.feature-badge.badge-repair { background: rgba(255, 255, 255, 1); }
+.feature-badge.badge-montage { background: rgba(255, 255, 255, 1); }
 
 .feature-body {
     padding: 24px;
