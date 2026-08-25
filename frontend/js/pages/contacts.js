@@ -9,7 +9,6 @@ export function renderContacts() {
         <p class="page-subtitle">Заполните детали, и мы свяжемся с вами в течение 10 минут.</p>
 
         <div class="contacts-wrapper">
-            <!-- Продвинутая форма заказа -->
             <form id="order-form" class="order-form">
                 <h3>Заявка на выезд мастера</h3>
                 
@@ -20,17 +19,18 @@ export function renderContacts() {
                     </div>
 
                     <div class="form-group">
-                        <label>Телефон *</label>
-                        <input type="tel" name="phone" placeholder="+7 (999) 000-00-00" required>
+                        <label>Телефон / WhatsApp *</label>
+                        <input type="tel" name="phone" placeholder="+374 00 000000" required>
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Направление услуги *</label>
+                    <label>Категория услуги *</label>
                     <select name="serviceType" required>
-                        <option value="cleaning">Клининг (Уборка / Мытье окон)</option>
-                        <option value="repair">Косметический ремонт</option>
-                        <option value="montage">Установка / Монтаж</option>
+                        <option value="cleaning">Уборка и клининг (от 30 €/час)</option>
+                        <option value="furniture">Сборка / разборка мебели (от 20 €)</option>
+                        <option value="restoration">Реставрация декора (от 30 €)</option>
+                        <option value="relocation">Помощь при переезде (30-40 €/час)</option>
                     </select>
                 </div>
 
@@ -57,25 +57,23 @@ export function renderContacts() {
 
                 <div class="form-group">
                     <label>Детали заказа</label>
-                    <textarea name="message" rows="3" placeholder="Укажите площадь помещения или кратко опишите задачу..."></textarea>
+                    <textarea name="message" rows="3" placeholder="Укажите площадь помещения, объём мебели или особенности задачи..."></textarea>
                 </div>
 
                 <button type="submit" class="btn-primary">Отправить и рассчитать стоимость</button>
                 <div id="form-status" style="margin-top: 15px; font-weight: 600; text-align: center;"></div>
             </form>
 
-            <!-- Контакты -->
             <div class="contacts-info">
                 <h3>Наши контакты</h3>
-                <p><strong>📍 Офис:</strong> г. Москва, ул. Центральная, д. 15</p>
-                <p><strong>📞 Диспетчер:</strong> +7 (495) 123-45-67</p>
-                <p><strong>✉️ Отдел продаж:</strong> order@business-services.ru</p>
+                <p><strong>📍 Офис:</strong> г. Ереван</p>
+                <p><strong>📞 Диспетчер:</strong> +374 (00) 00-00-00</p>
+                <p><strong>✉️ Email:</strong> info@business-services.com</p>
                 <p><strong>⏰ Режим работы:</strong> Пн-Вс: 08:00 - 21:00</p>
             </div>
         </div>
     `;
 
-    // Обработка отправки
     const form = container.querySelector('#order-form');
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
