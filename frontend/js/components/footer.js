@@ -1,23 +1,22 @@
 export function renderFooter() {
-    const lang = localStorage.getItem('app_lang') || 'ru';
-
-    const translations = {
-        ru: { rights: 'Все права защищены.' },
-        en: { rights: 'All rights reserved.' },
-        fr: { rights: 'Tous droits réservés.' },
-        it: { rights: 'Tutti i diritti riservati.' }
+    const currentLang = localStorage.getItem('app_lang') || 'ru';
+    
+    const rightsMap = {
+        ru: 'Все права защищены.',
+        en: 'All rights reserved.',
+        fr: 'Tous droits réservés.',
+        it: 'Tutti i diritti riservati.',
+        es: 'Todos los derechos reservados.',
+        de: 'Alle Rechte vorbehalten.',
+        nl: 'Alle rechten voorbehouden.'
     };
-
-    const t = translations[lang] || translations.ru;
-    const currentYear = new Date().getFullYear();
+    const rightsText = rightsMap[currentLang] || rightsMap.ru;
 
     const footer = document.createElement('footer');
-    footer.className = 'site-footer';
     footer.innerHTML = `
-        <div class="footer-content" style="text-align: center; padding: 20px 0;">
-            <p>&copy; ${currentYear} Karlos Hakobyan. ${t.rights}</p>
+        <div class="footer-content">
+            <p>&copy; ${new Date().getFullYear()} Karlos Hakobyan. ${rightsText}</p>
         </div>
     `;
-
     return footer;
 }

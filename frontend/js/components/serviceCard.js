@@ -1,74 +1,64 @@
-function getCategoryBadge(category, lang = 'ru') {
+function getCategoryBadge(category) {
+    const currentLang = localStorage.getItem('app_lang') || 'ru';
+
     const badges = {
-        ru: {
-            'cleaning': { label: 'Клининг', class: 'badge-cleaning' },
-            'furniture': { label: 'Мебель', class: 'badge-montage' },
-            'restoration': { label: 'Реставрация', class: 'badge-repair' },
-            'relocation': { label: 'Переезд', class: 'badge-cleaning' }
+        'repair': {
+            ru: 'Ремонт', en: 'Repair', fr: 'Réparation', it: 'Riparazione', es: 'Reparación', de: 'Reparatur', nl: 'Reparatie',
+            class: 'badge-repair'
         },
-        en: {
-            'cleaning': { label: 'Cleaning', class: 'badge-cleaning' },
-            'furniture': { label: 'Furniture', class: 'badge-montage' },
-            'restoration': { label: 'Restoration', class: 'badge-repair' },
-            'relocation': { label: 'Relocation', class: 'badge-cleaning' }
+        'cleaning': {
+            ru: 'Клининг', en: 'Cleaning', fr: 'Nettoyage', it: 'Pulizia', es: 'Limpieza', de: 'Reinigung', nl: 'Schoonmaak',
+            class: 'badge-cleaning'
         },
-        fr: {
-            'cleaning': { label: 'Nettoyage', class: 'badge-cleaning' },
-            'furniture': { label: 'Meubles', class: 'badge-montage' },
-            'restoration': { label: 'Restauration', class: 'badge-repair' },
-            'relocation': { label: 'Déménagement', class: 'badge-cleaning' }
-        },
-        it: {
-            'cleaning': { label: 'Pulizia', class: 'badge-cleaning' },
-            'furniture': { label: 'Mobili', class: 'badge-montage' },
-            'restoration': { label: 'Restauro', class: 'badge-repair' },
-            'relocation': { label: 'Trasloco', class: 'badge-cleaning' }
+        'montage': {
+            ru: 'Монтаж', en: 'Montage', fr: 'Montage', it: 'Montaggio', es: 'Montaje', de: 'Montage', nl: 'Montage',
+            class: 'badge-montage'
         }
     };
 
-    const currentBadges = badges[lang] || badges.ru;
-    
-    const defaultLabels = {
-        ru: 'Услуга',
-        en: 'Service',
-        fr: 'Service',
-        it: 'Servizio'
+    const item = badges[category] || {
+        ru: 'Услуга', en: 'Service', fr: 'Service', it: 'Servizio', es: 'Servicio', de: 'Dienstleistung', nl: 'Dienst',
+        class: ''
     };
-    const defaultLabel = defaultLabels[lang] || defaultLabels.ru;
 
-    return currentBadges[category] || { label: defaultLabel, class: 'badge-cleaning' };
+    return {
+        label: item[currentLang] || item.ru,
+        class: item.class
+    };
 }
 
 function getIconForService(category) {
     const icons = {
+        'repair': '🧱',
         'cleaning': '✨',
-        'furniture': '🪑',
-        'restoration': '🎨',
-        'relocation': '📦'
+        'montage': '🔧'
     };
     return icons[category] || '🛠️';
 }
 
 export function renderServiceCard(service) {
     const currentLang = localStorage.getItem('app_lang') || 'ru';
-    
-    const btnTexts = {
+
+    const orderBtnText = {
         ru: 'Заказать',
-        en: 'Book Now',
+        en: 'Order',
         fr: 'Commander',
-        it: 'Ordina'
+        it: 'Ordina',
+        es: 'Pedir',
+        de: 'Bestellen',
+        nl: 'Bestellen'
     };
-    const btnText = btnTexts[currentLang] || btnTexts.ru;
+    const btnText = orderBtnText[currentLang] || orderBtnText.ru;
 
     const card = document.createElement('div');
     card.className = 'service-card';
     
-    const badge = getCategoryBadge(service.category, currentLang);
+    const badge = getCategoryBadge(service.category);
     const icon = getIconForService(service.category);
 
     card.innerHTML = `
         <div class="card-header">
-            <span class="service-icon" style="font-size: 1.5rem;">${icon}</span>
+            <span class="service-icon">${icon}</span>
             <span class="badge ${badge.class}">${badge.label}</span>
         </div>
         <h3 class="service-title">${service.title}</h3>

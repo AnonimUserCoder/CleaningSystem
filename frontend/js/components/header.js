@@ -1,7 +1,4 @@
 export function renderHeader() {
-    const headerContainer = document.getElementById('header-container');
-    if (!headerContainer) return;
-
     const currentLang = localStorage.getItem('app_lang') || 'ru';
 
     const translations = {
@@ -36,51 +33,76 @@ export function renderHeader() {
             prices: 'Prezzi',
             about: 'Chi siamo',
             btnRequest: 'Richiedi un servizio'
+        },
+        es: {
+            home: 'Inicio',
+            services: 'Servicios',
+            portfolio: 'Portfolio',
+            prices: 'Precios',
+            about: 'Sobre nosotros',
+            btnRequest: 'Reservar'
+        },
+        de: {
+            home: 'Startseite',
+            services: 'Leistungen',
+            portfolio: 'Portfolio',
+            prices: 'Preise',
+            about: 'Über uns',
+            btnRequest: 'Buchen'
+        },
+        nl: {
+            home: 'Home',
+            services: 'Diensten',
+            portfolio: 'Portfolio',
+            prices: 'Prijzen',
+            about: 'Over ons',
+            btnRequest: 'Boeken'
         }
     };
 
     const t = translations[currentLang] || translations.ru;
 
-    headerContainer.innerHTML = `
-        <header class="site-header">
-            <div class="header-container" style="display: flex; align-items: center; justify-content: space-between;">
-                <a href="#/" class="logo">Business<span>Services</span></a>
+    const header = document.createElement('header');
+    header.innerHTML = `
+        <div class="header-container">
+            <a href="#" class="logo">Business<span>Services</span></a>
+            <nav>
+                <a href="#">${t.home}</a>
+                <a href="#services">${t.services}</a>
+                <a href="#portfolio">${t.portfolio}</a>
+                <a href="#prices">${t.prices}</a>
+                <a href="#about">${t.about}</a>
+                <a href="#contacts" class="btn-nav">${t.btnRequest}</a>
                 
-                <nav class="main-nav" style="display: flex; align-items: center; gap: 15px;">
-                    <a href="#/">${t.home}</a>
-                    <a href="#/services">${t.services}</a>
-                    <a href="#/portfolio">${t.portfolio}</a>
-                    <a href="#/prices">${t.prices}</a>
-                    <a href="#/about">${t.about}</a>
-                    <a href="#/contacts" class="btn-primary" style="margin-left: 10px;">${t.btnRequest}</a>
-                    
-                    <select id="lang-select" style="
-                        background: #0f172a;
-                        color: #ffffff;
-                        border: 1px solid #38bdf8;
-                        border-radius: 6px;
-                        padding: 6px 10px;
-                        font-size: 14px;
-                        cursor: pointer;
-                        margin-left: 10px;
-                        display: inline-block;
-                        z-index: 999;
-                    ">
-                        <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>FR</option>
-                        <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
-                        <option value="it" ${currentLang === 'it' ? 'selected' : ''}>IT</option>
-                        <option value="ru" ${currentLang === 'ru' ? 'selected' : ''}>RU</option>
-                    </select>
-                </nav>
-            </div>
-        </header>
+                <select id="lang-select" style="
+                    background: #0f172a;
+                    color: #ffffff;
+                    border: 1px solid #38bdf8;
+                    border-radius: 6px;
+                    padding: 4px 8px;
+                    font-size: 14px;
+                    cursor: pointer;
+                    margin-left: 8px;
+                ">
+                    <option value="ru" ${currentLang === 'ru' ? 'selected' : ''}>RU</option>
+                    <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
+                    <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>FR</option>
+                    <option value="it" ${currentLang === 'it' ? 'selected' : ''}>IT</option>
+                    <option value="es" ${currentLang === 'es' ? 'selected' : ''}>ES</option>
+                    <option value="de" ${currentLang === 'de' ? 'selected' : ''}>DE</option>
+                    <option value="nl" ${currentLang === 'nl' ? 'selected' : ''}>NL</option>
+                </select>
+            </nav>
+        </div>
     `;
 
-    const langSelect = document.getElementById('lang-select');
+    const langSelect = header.querySelector('#lang-select');
     if (langSelect) {
         langSelect.addEventListener('change', (e) => {
             localStorage.setItem('app_lang', e.target.value);
             window.location.reload();
         });
     }
+
+    return header;
 }

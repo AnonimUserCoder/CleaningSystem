@@ -33,6 +33,30 @@ export function renderHeader() {
             prices: 'Prezzi',
             about: 'Chi siamo',
             btnRequest: 'Richiedi un servizio'
+        },
+        es: {
+            home: 'Inicio',
+            services: 'Servicios',
+            portfolio: 'Portfolio',
+            prices: 'Precios',
+            about: 'Sobre nosotros',
+            btnRequest: 'Reservar'
+        },
+        de: {
+            home: 'Startseite',
+            services: 'Leistungen',
+            portfolio: 'Portfolio',
+            prices: 'Preise',
+            about: 'Über uns',
+            btnRequest: 'Buchen'
+        },
+        nl: {
+            home: 'Home',
+            services: 'Diensten',
+            portfolio: 'Portfolio',
+            prices: 'Prijzen',
+            about: 'Over ons',
+            btnRequest: 'Boeken'
         }
     };
 
@@ -40,9 +64,9 @@ export function renderHeader() {
 
     const header = document.createElement('header');
     header.innerHTML = `
-        <div class="header-container" style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="header-container">
             <a href="#/" class="logo">Business<span>Services</span></a>
-            <nav style="display: flex; align-items: center; gap: 12px;">
+            <nav>
                 <a href="#/">${t.home}</a>
                 <a href="#/services">${t.services}</a>
                 <a href="#/portfolio">${t.portfolio}</a>
@@ -64,6 +88,9 @@ export function renderHeader() {
                     <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
                     <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>FR</option>
                     <option value="it" ${currentLang === 'it' ? 'selected' : ''}>IT</option>
+                    <option value="es" ${currentLang === 'es' ? 'selected' : ''}>ES</option>
+                    <option value="de" ${currentLang === 'de' ? 'selected' : ''}>DE</option>
+                    <option value="nl" ${currentLang === 'nl' ? 'selected' : ''}>NL</option>
                 </select>
             </nav>
         </div>
@@ -82,12 +109,15 @@ export function renderHeader() {
 
 export function renderFooter() {
     const currentLang = localStorage.getItem('app_lang') || 'ru';
-    
+
     const rightsMap = {
         ru: 'Все права защищены.',
         en: 'All rights reserved.',
         fr: 'Tous droits réservés.',
-        it: 'Tutti i diritti riservati.'
+        it: 'Tutti i diritti riservati.',
+        es: 'Todos los derechos reservados.',
+        de: 'Alle Rechte vorbehalten.',
+        nl: 'Alle rechten voorbehouden.'
     };
     const rightsText = rightsMap[currentLang] || rightsMap.ru;
 
@@ -100,42 +130,37 @@ export function renderFooter() {
     return footer;
 }
 
-function getCategoryBadge(category, lang = 'ru') {
+function getCategoryBadge(category) {
+    const currentLang = localStorage.getItem('app_lang') || 'ru';
+
     const badges = {
-        ru: {
-            'cleaning': { label: 'Клининг', class: 'badge-cleaning' },
-            'furniture': { label: 'Мебель', class: 'badge-montage' },
-            'restoration': { label: 'Реставрация', class: 'badge-repair' },
-            'relocation': { label: 'Переезд', class: 'badge-cleaning' }
+        cleaning: {
+            ru: 'Клининг', en: 'Cleaning', fr: 'Nettoyage', it: 'Pulizia', es: 'Limpieza', de: 'Reinigung', nl: 'Schoonmaak',
+            class: 'badge-cleaning'
         },
-        en: {
-            'cleaning': { label: 'Cleaning', class: 'badge-cleaning' },
-            'furniture': { label: 'Furniture', class: 'badge-montage' },
-            'restoration': { label: 'Restoration', class: 'badge-repair' },
-            'relocation': { label: 'Relocation', class: 'badge-cleaning' }
+        furniture: {
+            ru: 'Мебель', en: 'Furniture', fr: 'Mobilier', it: 'Mobili', es: 'Muebles', de: 'Möbel', nl: 'Meubels',
+            class: 'badge-montage'
         },
-        fr: {
-            'cleaning': { label: 'Nettoyage', class: 'badge-cleaning' },
-            'furniture': { label: 'Meubles', class: 'badge-montage' },
-            'restoration': { label: 'Restauration', class: 'badge-repair' },
-            'relocation': { label: 'Déménagement', class: 'badge-cleaning' }
+        restoration: {
+            ru: 'Реставрация', en: 'Restoration', fr: 'Restauration', it: 'Restauro', es: 'Restauración', de: 'Restaurierung', nl: 'Restauratie',
+            class: 'badge-repair'
         },
-        it: {
-            'cleaning': { label: 'Pulizia', class: 'badge-cleaning' },
-            'furniture': { label: 'Mobili', class: 'badge-montage' },
-            'restoration': { label: 'Restauro', class: 'badge-repair' },
-            'relocation': { label: 'Trasloco', class: 'badge-cleaning' }
+        relocation: {
+            ru: 'Переезд', en: 'Relocation', fr: 'Déménagement', it: 'Trasloco', es: 'Mudanza', de: 'Umzug', nl: 'Verhuizing',
+            class: 'badge-cleaning'
         }
     };
 
-    const currentBadges = badges[lang] || badges.ru;
-    
-    let defaultLabel = 'Услуга';
-    if (lang === 'fr' || lang === 'it' || lang === 'en') {
-        defaultLabel = 'Servizio';
-    }
+    const item = badges[category] || {
+        ru: 'Услуга', en: 'Service', fr: 'Service', it: 'Servizio', es: 'Servicio', de: 'Dienstleistung', nl: 'Dienst',
+        class: 'badge-cleaning'
+    };
 
-    return currentBadges[category] || { label: defaultLabel, class: 'badge-cleaning' };
+    return {
+        label: item[currentLang] || item.ru,
+        class: item.class
+    };
 }
 
 function getIconForService(category) {
@@ -150,18 +175,22 @@ function getIconForService(category) {
 
 export function renderServiceCard(service) {
     const currentLang = localStorage.getItem('app_lang') || 'ru';
-    const btnTexts = {
+
+    const orderBtnText = {
         ru: 'Заказать',
-        en: 'Book Now',
+        en: 'Order',
         fr: 'Commander',
-        it: 'Ordina'
+        it: 'Ordina',
+        es: 'Pedir',
+        de: 'Bestellen',
+        nl: 'Bestellen'
     };
-    const btnText = btnTexts[currentLang] || btnTexts.ru;
+    const btnText = orderBtnText[currentLang] || orderBtnText.ru;
 
     const card = document.createElement('div');
     card.className = 'service-card';
     
-    const badge = getCategoryBadge(service.category, currentLang);
+    const badge = getCategoryBadge(service.category);
     const icon = getIconForService(service.category);
 
     card.innerHTML = `

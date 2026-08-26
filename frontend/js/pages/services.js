@@ -148,6 +148,117 @@ const mockServicesData = {
         { id: 26, title: 'Servizio di imballaggio', category: 'relocation', price: 'su preventivo', description: 'Imballaggio sicuro di scatole ed effetti personali fragili.' },
         { id: 27, title: 'Preparazione locali al trasloco', category: 'relocation', price: 'su preventivo', description: 'Sgombero ambienti, riordino e organizzazione dello spazio.' },
         { id: 28, title: 'Pulizia post-trasloco', category: 'relocation', price: 'da 150 €', description: 'Pulizia e igienizzazione dei locali dopo lo sgombero finale.' }
+    ],
+    es: [
+        // LIMPIEZA
+        { id: 1, title: 'Limpieza de mantenimiento para casas y pisos', category: 'cleaning', price: '30-35 €/hora', description: 'Mantenimiento regular del orden, aspirado, limpieza húmeda de superficies y sanitarios.' },
+        { id: 2, title: 'Limpieza general', category: 'cleaning', price: '35-45 €/hora', description: 'Limpieza a fondo de zonas difíciles, muebles de cocina y electrodomésticos.' },
+        { id: 3, title: 'Limpieza profunda', category: 'cleaning', price: '40-50 €/hora', description: 'Desinfección minuciosa y eliminación de manchas persistentes.' },
+        { id: 4, title: 'Limpieza fin de obra', category: 'cleaning', price: '4-10 €/m²', description: 'Eliminación de polvo de obra, restos de pintura, lechada y cemento.' },
+        { id: 5, title: 'Limpieza tras mudanza', category: 'cleaning', price: 'desde 150 €', description: 'Limpieza completa del inmueble tras el desalojo y transporte de enseres.' },
+        { id: 6, title: 'Limpieza para entrega de llaves o cambio de inquilinos', category: 'cleaning', price: 'desde 150 €', description: 'Preparación integral del inmueble para nuevos inquilinos.' },
+        { id: 7, title: 'Limpieza de oficinas y locales comerciales', category: 'cleaning', price: '25-35 €/hora', description: 'Mantenimiento del orden en zonas de trabajo, descanso y aseos.' },
+        { id: 8, title: 'Limpieza de ventanas', category: 'cleaning', price: '3-6 € por ventana / 30-45 €/hora', description: 'Limpieza profesional de marcos, cristales y repisas.' },
+        { id: 9, title: 'Limpieza de balcones o terrazas', category: 'cleaning', price: 'desde 30-80 €', description: 'Limpieza de balcones, terrazas y galerías de polvo y suciedad.' },
+
+        // MONTAJE DE MUEBLES
+        { id: 10, title: 'Montaje de silla', category: 'furniture', price: 'desde 20 €', description: 'Montaje de sillas de bar, oficina y cocina.' },
+        { id: 11, title: 'Montaje de mesa pequeña', category: 'furniture', price: 'desde 30-50 €', description: 'Montaje de mesas de centro, escritorios y mesas de comedor.' },
+        { id: 12, title: 'Montaje de cómoda', category: 'furniture', price: 'desde 40-70 €', description: 'Montaje de estructura, instalación y ajuste de cajones.' },
+        { id: 13, title: 'Montaje de cama', category: 'furniture', price: 'desde 50-80 €', description: 'Montaje de somier, cabecero y sistemas abatibles.' },
+        { id: 14, title: 'Montaje de armario', category: 'furniture', price: 'desde 80-200 €', description: 'Montaje de estructura, puertas y ajuste de herrajes.' },
+        { id: 15, title: 'Armario grande / Vestidor', category: 'furniture', price: 'según presupuesto', description: 'Instalación de muebles modulares complejos y sistemas de vestidor.' },
+        { id: 16, title: 'Desmontaje de muebles', category: 'furniture', price: 'desde 30-100 €', description: 'Desmontaje cuidadoso antes del transporte o reforma.' },
+        { id: 17, title: 'Montaje y desmontaje durante mudanzas', category: 'furniture', price: '30-40 €/hora', description: 'Servicio rápido de montaje y desmontaje en proceso de mudanza.' },
+
+        // RESTAURACIÓN
+        { id: 18, title: 'Restauración de maceta pequeña o cubremaceta', category: 'restoration', price: 'desde 30-50 €', description: 'Reparación de grietas leves, desconchones y pintado.' },
+        { id: 19, title: 'Restauración de maceta decorativa mediana', category: 'restoration', price: 'desde 50-100 €', description: 'Restauración de la estructura y el acabado decorativo.' },
+        { id: 20, title: 'Restauración de escultura decorativa pequeña', category: 'restoration', price: 'desde 80-150 €', description: 'Restauración puntual y consolidación de partes frágiles.' },
+        { id: 21, title: 'Restauración de escultura grande de jardín o interior', category: 'restoration', price: 'desde 150 €', description: 'Renovación integral de piezas de gran tamaño.' },
+        { id: 22, title: 'Restauración compleja de yeso y cerámica', category: 'restoration', price: 'según presupuesto', description: 'Restauración a medida de objetos frágiles y valiosos.' },
+        { id: 23, title: 'Limpieza y renovación de objetos decorativos', category: 'restoration', price: 'según presupuesto', description: 'Limpieza delicada profesional y aplicación de tratamientos protectores.' },
+
+        // MUDANZAS
+        { id: 24, title: 'Ayuda con la mudanza', category: 'relocation', price: '30-40 €/hora', description: 'Carga, descarga y soporte completo durante la mudanza.' },
+        { id: 25, title: 'Montaje y desmontaje de muebles para mudanza', category: 'relocation', price: 'desde 35 €/hora', description: 'Preparación de muebles para transporte y montaje en el nuevo espacio.' },
+        { id: 26, title: 'Servicio de embalaje', category: 'relocation', price: 'según presupuesto', description: 'Embalaje seguro de cajas y objetos delicados.' },
+        { id: 27, title: 'Preparación de espacios para la mudanza', category: 'relocation', price: 'según presupuesto', description: 'Desalojo de estancias, organización y distribución del espacio.' },
+        { id: 28, title: 'Limpieza tras la mudanza', category: 'relocation', price: 'desde 150 €', description: 'Limpieza y puesta a punto tras vaciar por completo el inmueble.' }
+    ],
+    de: [
+        // REINIGUNG
+        { id: 1, title: 'Unterhaltsreinigung für Wohnungen & Häuser', category: 'cleaning', price: '30-35 €/Std.', description: 'Regelmäßige Sauberkeit, Staubsaugen, feuchtes Wischen von Flächen und Sanitär.' },
+        { id: 2, title: 'Grundreinigung', category: 'cleaning', price: '35-45 €/Std.', description: 'Gründliche Reinigung schwer zugänglicher Stellen, Küchenzeilen und Geräte.' },
+        { id: 3, title: 'Intensivreinigung', category: 'cleaning', price: '40-50 €/Std.', description: 'Eingehende Desinfektion und tiefgründige Entfernung hartnäckiger Flecken.' },
+        { id: 4, title: 'Bauendreinigung', category: 'cleaning', price: '4-10 €/m²', description: 'Beseitigung von Baustaub, Farbresten, Fugenmasse und Zement.' },
+        { id: 5, title: 'Reinigung nach Umzug', category: 'cleaning', price: 'ab 150 €', description: 'Komplette Reinigung nach Auszug und Möbeltransport.' },
+        { id: 6, title: 'Übergabereinigung (Einzug / Auszug)', category: 'cleaning', price: 'ab 150 €', description: 'Vollständige Vorbereitung des Objekts für neue Mieter.' },
+        { id: 7, title: 'Büro- und Gewerbereinigung', category: 'cleaning', price: '25-35 €/Std.', description: 'Ordnung an Arbeitsplätzen, Pausenräumen und Sanitäranlagen.' },
+        { id: 8, title: 'Fensterreinigung', category: 'cleaning', price: '3-6 € pro Fenster / 30-45 €/Std.', description: 'Professionelle Reinigung von Rahmen, Scheiben und Bänken.' },
+        { id: 9, title: 'Balkon- oder Terrassenreinigung', category: 'cleaning', price: 'ab 30-80 €', description: 'Befreiung von Balkonen, Loggien und Terrassen von Staub und Schmutz.' },
+
+        // MÖBELMONTAGE
+        { id: 10, title: 'Stuhlmontage', category: 'furniture', price: 'ab 20 €', description: 'Montage von Bar-, Büro- und Küchenstühlen.' },
+        { id: 11, title: 'Montage kleiner Tisch', category: 'furniture', price: 'ab 30-50 €', description: 'Montage von Couch-, Schreib- und Esstischen.' },
+        { id: 12, title: 'Kommodenmontage', category: 'furniture', price: 'ab 40-70 €', description: 'Korpusaufbau, Einbau und Ausrichtung von Schubladen.' },
+        { id: 13, title: 'Bettmontage', category: 'furniture', price: 'ab 50-80 €', description: 'Montage von Gestell, Kopfteil und Bettkastenmechanismen.' },
+        { id: 14, title: 'Schrankmontage', category: 'furniture', price: 'ab 80-200 €', description: 'Aufbau des Korpus, Türmontage und Beschlageinstellung.' },
+        { id: 15, title: 'Großer Schrank / Ankleidezimmer', category: 'furniture', price: 'nach Angebot', description: 'Montage komplexer Modulmöbel und Ankleidesysteme.' },
+        { id: 16, title: 'Möbeldemontage', category: 'furniture', price: 'ab 30-100 €', description: 'Sorgfältige Demontage vor Transport oder Renovierung.' },
+        { id: 17, title: 'Möbelmontage & -demontage bei Umzug', category: 'furniture', price: '30-40 €/Std.', description: 'Schneller Auf- und Abbau im Zuge des Umzugs.' },
+
+        // RESTAURATION
+        { id: 18, title: 'Restauration kleiner Topf / Übertopf', category: 'restoration', price: 'ab 30-50 €', description: 'Ausbessern kleiner Risse, Abplatzungen und Lackierung.' },
+        { id: 19, title: 'Restauration mittlerer Dekotopf', category: 'restoration', price: 'ab 50-100 €', description: 'Wiederherstellung von Struktur und Dekoroberfläche.' },
+        { id: 20, title: 'Restauration kleine Dekorskulptur', category: 'restoration', price: 'ab 80-150 €', description: 'Punktuelle Festigung und Aufarbeitung instabiler Stellen.' },
+        { id: 21, title: 'Restauration große Garten-/Interieurfigur', category: 'restoration', price: 'ab 150 €', description: 'Umfassende Erneuerung großformatiger Objekte.' },
+        { id: 22, title: 'Aufwendige Restauration (Gips, Keramik)', category: 'restoration', price: 'nach Angebot', description: 'Individuelle Wiederherstellung wertvoller und fragiler Objekte.' },
+        { id: 23, title: 'Reinigung & Auffrischung von Dekorelementen', category: 'restoration', price: 'nach Angebot', description: 'Schonende Reinigung und Schutzversiegelung.' },
+
+        // UMZUGSHILFE
+        { id: 24, title: 'Umzugshilfe', category: 'relocation', price: '30-40 €/Std.', description: 'Be- und Entladen sowie Begleitung des Umzugs.' },
+        { id: 25, title: 'Möbelmontage/-demontage beim Umzug', category: 'relocation', price: 'ab 35 €/Std.', description: 'Vorbereitung für den Transport und Wiederaufbau am Zielort.' },
+        { id: 26, title: 'Verpackungsservice', category: 'relocation', price: 'nach Angebot', description: 'Sicheres Einpacken von Kartons und empfindlichen Gegenständen.' },
+        { id: 27, title: 'Raumvorbereitung für den Umzug', category: 'relocation', price: 'nach Angebot', description: 'Räumen von Zimmern, Stellordnung und Raumorganisation.' },
+        { id: 28, title: 'Reinigung nach Umzug', category: 'relocation', price: 'ab 150 €', description: 'Säuberung der Räumlichkeiten nach dem vollständigen Auszug.' }
+    ],
+    nl: [
+        // SCHOONMAAK
+        { id: 1, title: 'Standaard schoonmaak van huizen en appartementen', category: 'cleaning', price: '30-35 €/uur', description: 'Regelmatig onderhoud, stofzuigen, vochtig afnemen van oppervlakken en sanitair.' },
+        { id: 2, title: 'Grote schoonmaak', category: 'cleaning', price: '35-45 €/uur', description: 'Grondige reiniging van moeilijk bereikbare plekken, keukens en apparatuur.' },
+        { id: 3, title: 'Dieptereiniging', category: 'cleaning', price: '40-50 €/uur', description: 'Diepgaande desinfectie en verwijdering van hardnekkig vuil.' },
+        { id: 4, title: 'Schoonmaak na verbouwing', category: 'cleaning', price: '4-10 €/m²', description: 'Verwijderen van bouwstof, verfresten, voegmiddel en cement.' },
+        { id: 5, title: 'Schoonmaak na verhuizing', category: 'cleaning', price: 'vanaf 150 €', description: 'Volledige reiniging van de woning na ontruiming en transport.' },
+        { id: 6, title: 'Opleveringsschoonmaak (in-/uitverhuizing)', category: 'cleaning', price: 'vanaf 150 €', description: 'Woning klaarmaken voor nieuwe huurders of oplevering.' },
+        { id: 7, title: 'Kantoor- en bedrijfsreiniging', category: 'cleaning', price: '25-35 €/uur', description: 'Schoonhouden van werkplekken, kantines en sanitaire ruimtes.' },
+        { id: 8, title: 'Glazenwassen', category: 'cleaning', price: '3-6 € per raam / 30-45 €/uur', description: 'Professionele reiniging van kozijnen, ramen en vensterbanken.' },
+        { id: 9, title: 'Balkon- of terrasreiniging', category: 'cleaning', price: 'vanaf 30-80 €', description: 'Schoonmaken van balkons, loggia’s en terrassen van stof en vuil.' },
+
+        // MEUBELMONTAGE
+        { id: 10, title: 'Stoel monteren', category: 'furniture', price: 'vanaf 20 €', description: 'Montage van barstoelen, bureaustoelen en eetkamerstoelen.' },
+        { id: 11, title: 'Kleine tafel monteren', category: 'furniture', price: 'vanaf 30-50 €', description: 'Montage van salon-, bureau- en eettafels.' },
+        { id: 12, title: 'Ladekast monteren', category: 'furniture', price: 'vanaf 40-70 €', description: 'Frame opbouwen, lades plaatsen en afstellen.' },
+        { id: 13, title: 'Bed monteren', category: 'furniture', price: 'vanaf 50-80 €', description: 'Montage van frame, hoofdbord en opbergmechanismen.' },
+        { id: 14, title: 'Kledingkast monteren', category: 'furniture', price: 'vanaf 80-200 €', description: 'Montage van de kast, deuren afhangen en beslag afstellen.' },
+        { id: 15, title: 'Grote kast / Inloopkast', category: 'furniture', price: 'op offerte basis', description: 'Montage van complexe modulaire meubels en inloopkasten.' },
+        { id: 16, title: 'Meubels demonteren', category: 'furniture', price: 'vanaf 30-100 €', description: 'Zorgvuldige demontage voor transport of renovatie.' },
+        { id: 17, title: 'Meubelmontage en -demontage bij verhuizing', category: 'furniture', price: '30-40 €/uur', description: 'Snelle montage/demontage tijdens het verhuisproces.' },
+
+        // RESTAURATIE
+        { id: 18, title: 'Restauratie kleine pot of bloempot', category: 'restoration', price: 'vanaf 30-50 €', description: 'Herstel van kleine scheurtjes, chips en schilderwerk.' },
+        { id: 19, title: 'Restauratie middelgrote decoratieve pot', category: 'restoration', price: 'vanaf 50-100 €', description: 'Herstel van de structuur en decoratieve afwerking.' },
+        { id: 20, title: 'Restauratie klein decoratief beeld', category: 'restoration', price: 'vanaf 80-150 €', description: 'Plaatselijke restauratie en versteviging van kwetsbare delen.' },
+        { id: 21, title: 'Restauratie groot tuin- of interieurbeeld', category: 'restoration', price: 'vanaf 150 €', description: 'Volledige vernieuwing van grote objecten.' },
+        { id: 22, title: 'Complex herstel van gips en keramiek', category: 'restoration', price: 'op offerte basis', description: 'Restauratie op maat van waardevolle en breekbare voorwerpen.' },
+        { id: 23, title: 'Reiniging en vernieuwing van decoratie', category: 'restoration', price: 'op offerte basis', description: 'Zachte professionele reiniging en aanbrengen van beschermlaag.' },
+
+        // VERHUIZING
+        { id: 24, title: 'Verhuishulp', category: 'relocation', price: '30-40 €/uur', description: 'Laden, lossen en volledige begeleiding bij verhuizing.' },
+        { id: 25, title: 'Montage/demontage meubels voor verhuizing', category: 'relocation', price: 'vanaf 35 €/uur', description: 'Klaarmaken van meubels voor transport en heropbouw op nieuwe locatie.' },
+        { id: 26, title: 'Inpakservice', category: 'relocation', price: 'op offerte basis', description: 'Veilig inpakken van dozen en kwetsbare spullen.' },
+        { id: 27, title: 'Ruimte voorbereiden op verhuizing', category: 'relocation', price: 'op offerte basis', description: 'Kamers leegmaken, indelen en ruimte organiseren.' },
+        { id: 28, title: 'Schoonmaak na verhuizing', category: 'relocation', price: 'vanaf 150 €', description: 'Schoonmaken van de ruimte nadat alle spullen zijn verhuisd.' }
     ]
 };
 
@@ -187,6 +298,33 @@ const translations = {
         tabFurniture: '🪑 Montaggio Mobili',
         tabRestoration: '🎨 Restauro Decorazioni',
         tabRelocation: '📦 Assistenza Trasloco'
+    },
+    es: {
+        pageTitle: 'Servicios para el hogar y espacios',
+        pageSubtitle: 'Gama completa de servicios domésticos, limpieza y restauración.',
+        tabAll: 'Todos los servicios',
+        tabCleaning: '✨ Limpieza',
+        tabFurniture: '🪑 Montaje de muebles',
+        tabRestoration: '🎨 Restauración',
+        tabRelocation: '📦 Ayuda con la mudanza'
+    },
+    de: {
+        pageTitle: 'Dienstleistungen für Haus & Objekt',
+        pageSubtitle: 'Komplettes Angebot an Haushalts-, Reinigungs- und Restaurationsdiensten.',
+        tabAll: 'Alle Angebote',
+        tabCleaning: '✨ Reinigung',
+        tabFurniture: '🪑 Möbelmontage',
+        tabRestoration: '🎨 Restauration',
+        tabRelocation: '📦 Umzugshilfe'
+    },
+    nl: {
+        pageTitle: 'Diensten voor huis en pand',
+        pageSubtitle: 'Compleet aanbod van huishoudelijke, schoonmaak- en restauratiediensten.',
+        tabAll: 'Alle diensten',
+        tabCleaning: '✨ Schoonmaak',
+        tabFurniture: '🪑 Meubelmontage',
+        tabRestoration: '🎨 Restauratie',
+        tabRelocation: '📦 Verhuishulp'
     }
 };
 
