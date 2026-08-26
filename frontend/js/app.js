@@ -1,6 +1,7 @@
 import { renderHeader, renderFooter } from './components/index.js';
 import { initRouter } from './router.js';
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById('app');
 
