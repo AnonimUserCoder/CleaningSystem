@@ -58,6 +58,25 @@ export function renderPortfolio() {
             card3Title: 'Restauration d’une sculpture de jardin',
             card3Desc: 'Réparation des éclats de plâtre, ponçage, application d’une sous-couche et d’un revêtement de protection extérieur.',
             card3Meta: '⏱ Durée: 2 jours'
+        },
+        it: {
+            title: 'Progetti realizzati',
+            subtitle: 'Casi reali dei nostri lavori di pulizia, montaggio e restauro.',
+            tagCleaning: 'Pulizia',
+            tagFurniture: 'Montaggio Mobili',
+            tagRestoration: 'Restauro',
+
+            card1Title: 'Pulizia di fondo di una casa di 120 m²',
+            card1Desc: 'Pulizia profonda della cucina, rimozione del calcare dai sanitari, lavaggio a umido di tutte le stanze e pulizia del balcone.',
+            card1Meta: '⏱ Tempo di esecuzione: 5 ore (35 €/ora)',
+
+            card2Title: 'Montaggio di una grande cabina armadio e di un letto',
+            card2Desc: 'Montaggio di un letto matrimoniale con meccansimo contenitore e installazione di un armadio a muro modulare con allineamento ante.',
+            card2Meta: '⏱ Tempo di esecuzione: 1 giorno',
+
+            card3Title: 'Restauro di una scultura da giardino',
+            card3Desc: 'Riparazione delle sbeccature del gesso, levigatura, primerizzazione e applicazione di un rivestimento protettivo per esterni.',
+            card3Meta: '⏱ Tempo di esecuzione: 2 giorni'
         }
     };
 

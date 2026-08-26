@@ -127,6 +127,49 @@ const TRANSLATIONS = {
                 img: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80'
             }
         ]
+    },
+    it: {
+        heroBadge: '✨ Servizi per la casa e ambienti',
+        heroTitle: 'Pulizie, montaggio mobili,<br><span>restauro e traslochi</span>',
+        heroSubtitle: 'Ci occupiamo di faccende domestiche di qualsiasi complessità. Intervento rapido dei professionisti, tariffe trasparenti in euro ed esecuzione accurata.',
+        btnOrder: 'Prenota un servizio',
+        btnServices: 'Vedi tutti i servizi →',
+        stats: [
+            { num: '500+', desc: 'Ordini completati' },
+            { num: '4.9 ★', desc: 'Valutazione media' },
+            { num: '15 min', desc: 'Calcolo del preventivo' }
+        ],
+        sectionTitle: 'Servizi principali',
+        cards: [
+            {
+                price: 'da 30 €/ora',
+                title: 'Pulizia & Sanificazione',
+                desc: 'Pulizie ordinarie, di fondo, approfondite e lavaggio finestre per casa e ufficio.',
+                link: 'Vai alle pulizie →',
+                img: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                price: 'da 20 €',
+                title: 'Montaggio & Smontaggio Mobili',
+                desc: 'Montaggio di tavoli, sedie, cassettiere, letti e sistemi di cabine armadio complesse.',
+                link: 'Chiama un tecnico →',
+                img: 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                price: '30-40 €/ora',
+                title: 'Assistenza al Trasloco',
+                desc: 'Imballaggio, aiuto nel carico, smontaggio mobili e pulizie post-trasloco.',
+                link: 'Scopri di più →',
+                img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80'
+            },
+            {
+                price: 'da 30 €',
+                title: 'Restauro Decorazioni',
+                desc: 'Restauro e riparazione di vasi, portavasi, sculture e altri articoli decorativi in gesso e ceramica.',
+                link: 'Scopri di più →',
+                img: 'https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?auto=format&fit=crop&w=600&q=80'
+            }
+        ]
     }
 };
 

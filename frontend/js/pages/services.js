@@ -111,6 +111,43 @@ const mockServicesData = {
         { id: 26, title: 'Service d’emballage', category: 'relocation', price: 'sur devis', description: 'Emballage sécurisé des cartons et objets fragiles.' },
         { id: 27, title: 'Préparation des locaux au déménagement', category: 'relocation', price: 'sur devis', description: 'Dégagement des pièces, rangement et organisation de l’espace.' },
         { id: 28, title: 'Nettoyage après déménagement', category: 'relocation', price: 'à partir de 150 €', description: 'Remise en état et nettoyage après enlèvement complet des effets.' }
+    ],
+    it: [
+        // PULIZIA
+        { id: 1, title: 'Pulizia ordinaria per appartamenti e case', category: 'cleaning', price: '30-35 €/ora', description: 'Mantenimento regolare della pulizia, aspirapolvere, lavaggio superfici e sanitari.' },
+        { id: 2, title: 'Pulizia generale', category: 'cleaning', price: '35-45 €/ora', description: 'Pulizia accurata di punti difficili da raggiungere, cucina ed elettrodomestici.' },
+        { id: 3, title: 'Pulizia profonda', category: 'cleaning', price: '40-50 €/ora', description: 'Disinfezione completa e rimozione profonda dello sporco ostinato.' },
+        { id: 4, title: 'Pulizia post-ristrutturazione', category: 'cleaning', price: '4-10 €/m²', description: 'Rimozione di polvere da cantiere, tracce di pittura, stucco e cemento.' },
+        { id: 5, title: 'Pulizia post-trasloco', category: 'cleaning', price: 'da 150 €', description: 'Pulizia completa dei locali dopo il rilascio e il trasporto degli effetti.' },
+        { id: 6, title: 'Pulizia pre-consegna o fine locazione', category: 'cleaning', price: 'da 150 €', description: 'Preparazione completa dell’immobile per i nuovi inquilini.' },
+        { id: 7, title: 'Pulizia uffici e locali commerciali', category: 'cleaning', price: '25-35 €/ora', description: 'Gestione dell’ordine nelle postazioni di lavoro, aree relax e servizi.' },
+        { id: 8, title: 'Lavaggio finestre', category: 'cleaning', price: '3-6 € a finestra / 30-45 €/ora', description: 'Pulizia professionale di telai, vetri e davanzali.' },
+        { id: 9, title: 'Pulizia balcone o terrazza', category: 'cleaning', price: 'da 30-80 €', description: 'Pulizia di balconi, logge e terrazze da polvere e sporcizia.' },
+
+        // MONTAGGIO MOBILI
+        { id: 10, title: 'Montaggio sedia', category: 'furniture', price: 'da 20 €', description: 'Montaggio di sedie da bar, da ufficio e da cucina.' },
+        { id: 11, title: 'Montaggio tavolo piccolo', category: 'furniture', price: 'da 30-50 €', description: 'Montaggio di tavolini da salotto, scrivanie e tavoli da pranzo.' },
+        { id: 12, title: 'Montaggio cassettiera', category: 'furniture', price: 'da 40-70 €', description: 'Montaggio della struttura, installazione e regolazione dei cassetti.' },
+        { id: 13, title: 'Montaggio letto', category: 'furniture', price: 'da 50-80 €', description: 'Montaggio di rete, testiera e meccanismi di sollevamento.' },
+        { id: 14, title: 'Montaggio armadio', category: 'furniture', price: 'da 80-200 €', description: 'Assemblaggio della struttura, installazione ante e regolazione cerniere.' },
+        { id: 15, title: 'Armadio grande / Cabina armadio', category: 'furniture', price: 'su preventivo', description: 'Montaggio di sistemi di arredo modulari complessi e cabine armadio.' },
+        { id: 16, title: 'Smontaggio mobili', category: 'furniture', price: 'da 30-100 €', description: 'Smontaggio accurato dei mobili prima del trasporto o della ristrutturazione.' },
+        { id: 17, title: 'Montaggio e smontaggio mobili durante il trasloco', category: 'furniture', price: '30-40 €/ora', description: 'Interventi rapidi di montaggio/smontaggio durante le fasi del trasloco.' },
+
+        // RESTAURO
+        { id: 18, title: 'Restauro vaso piccolo o portavaso', category: 'restoration', price: 'da 30-50 €', description: 'Riparazione di piccole crepe, sbeccature e verniciatura.' },
+        { id: 19, title: 'Restauro vaso decorativo medio', category: 'restoration', price: 'da 50-100 €', description: 'Ripristino dell’integrità strutturale e del rivestimento decorativo.' },
+        { id: 20, title: 'Restauro piccola scultura decorativa', category: 'restoration', price: 'da 80-150 €', description: 'Interventi di restauro mirato e consolidamento delle parti fragili.' },
+        { id: 21, title: 'Restauro grande scultura da giardino o da interno', category: 'restoration', price: 'da 150 €', description: 'Rinnovamento completo di elementi e figure di grandi dimensioni.' },
+        { id: 22, title: 'Restauro complesso (gesso, ceramica, ecc.)', category: 'restoration', price: 'su preventivo', description: 'Restauro personalizzato di oggetti di valore e materiali delicati.' },
+        { id: 23, title: 'Pulizia e rinnovo oggetti decorativi', category: 'restoration', price: 'su preventivo', description: 'Pulizia delicata professionale e applicazione di trattamenti protettivi.' },
+
+        // TRASLOCO
+        { id: 24, title: 'Assistenza al trasloco', category: 'relocation', price: '30-40 €/ora', description: 'Operazioni di carico, scarico e supporto completo per il trasloco.' },
+        { id: 25, title: 'Montaggio e smontaggio mobili per trasloco', category: 'relocation', price: 'da 35 €/ora', description: 'Preparazione dei mobili al trasporto e rimontaggio nella nuova sede.' },
+        { id: 26, title: 'Servizio di imballaggio', category: 'relocation', price: 'su preventivo', description: 'Imballaggio sicuro di scatole ed effetti personali fragili.' },
+        { id: 27, title: 'Preparazione locali al trasloco', category: 'relocation', price: 'su preventivo', description: 'Sgombero ambienti, riordino e organizzazione dello spazio.' },
+        { id: 28, title: 'Pulizia post-trasloco', category: 'relocation', price: 'da 150 €', description: 'Pulizia e igienizzazione dei locali dopo lo sgombero finale.' }
     ]
 };
 
@@ -141,6 +178,15 @@ const translations = {
         tabFurniture: '🪑 Montage de meubles',
         tabRestoration: '🎨 Restauration',
         tabRelocation: '📦 Aide au déménagement'
+    },
+    it: {
+        pageTitle: 'Servizi per la casa e gli ambienti',
+        pageSubtitle: 'Gamma completa di servizi domestici, pulizia e restauro.',
+        tabAll: 'Tutti i servizi',
+        tabCleaning: '✨ Pulizia & Sanificazione',
+        tabFurniture: '🪑 Montaggio Mobili',
+        tabRestoration: '🎨 Restauro Decorazioni',
+        tabRelocation: '📦 Assistenza Trasloco'
     }
 };
 

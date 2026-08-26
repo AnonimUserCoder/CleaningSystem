@@ -4,7 +4,8 @@ export function renderFooter() {
     const translations = {
         ru: { rights: 'Все права защищены.' },
         en: { rights: 'All rights reserved.' },
-        fr: { rights: 'Tous droits réservés.' }
+        fr: { rights: 'Tous droits réservés.' },
+        it: { rights: 'Tutti i diritti riservati.' }
     };
 
     const t = translations[lang] || translations.ru;

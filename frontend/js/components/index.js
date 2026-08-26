@@ -25,6 +25,14 @@ export function renderHeader() {
             prices: 'Tarifs',
             about: 'À propos',
             btnRequest: 'Demander un devis'
+        },
+        it: {
+            home: 'Home',
+            services: 'Servizi',
+            portfolio: 'Portfolio',
+            prices: 'Prezzi',
+            about: 'Chi siamo',
+            btnRequest: 'Richiedi un servizio'
         }
     };
 
@@ -55,6 +63,7 @@ export function renderHeader() {
                     <option value="ru" ${currentLang === 'ru' ? 'selected' : ''}>RU</option>
                     <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
                     <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>FR</option>
+                    <option value="it" ${currentLang === 'it' ? 'selected' : ''}>IT</option>
                 </select>
             </nav>
         </div>
@@ -77,7 +86,8 @@ export function renderFooter() {
     const rightsMap = {
         ru: 'Все права защищены.',
         en: 'All rights reserved.',
-        fr: 'Tous droits réservés.'
+        fr: 'Tous droits réservés.',
+        it: 'Tutti i diritti riservati.'
     };
     const rightsText = rightsMap[currentLang] || rightsMap.ru;
 
@@ -109,11 +119,21 @@ function getCategoryBadge(category, lang = 'ru') {
             'furniture': { label: 'Meubles', class: 'badge-montage' },
             'restoration': { label: 'Restauration', class: 'badge-repair' },
             'relocation': { label: 'Déménagement', class: 'badge-cleaning' }
+        },
+        it: {
+            'cleaning': { label: 'Pulizia', class: 'badge-cleaning' },
+            'furniture': { label: 'Mobili', class: 'badge-montage' },
+            'restoration': { label: 'Restauro', class: 'badge-repair' },
+            'relocation': { label: 'Trasloco', class: 'badge-cleaning' }
         }
     };
 
     const currentBadges = badges[lang] || badges.ru;
-    const defaultLabel = lang === 'fr' ? 'Service' : (lang === 'en' ? 'Service' : 'Услуга');
+    
+    let defaultLabel = 'Услуга';
+    if (lang === 'fr' || lang === 'it' || lang === 'en') {
+        defaultLabel = 'Servizio';
+    }
 
     return currentBadges[category] || { label: defaultLabel, class: 'badge-cleaning' };
 }
@@ -130,7 +150,12 @@ function getIconForService(category) {
 
 export function renderServiceCard(service) {
     const currentLang = localStorage.getItem('app_lang') || 'ru';
-    const btnTexts = { ru: 'Заказать', en: 'Book Now', fr: 'Commander' };
+    const btnTexts = {
+        ru: 'Заказать',
+        en: 'Book Now',
+        fr: 'Commander',
+        it: 'Ordina'
+    };
     const btnText = btnTexts[currentLang] || btnTexts.ru;
 
     const card = document.createElement('div');

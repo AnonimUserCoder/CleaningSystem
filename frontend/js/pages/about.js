@@ -19,6 +19,12 @@ export function renderAbout() {
             subtitle: 'Services ménagers et de réparation de haute qualité depuis 2020.',
             paragraph1: 'Nous avons réuni des spécialistes du nettoyage, de la finition intérieure et de l’installation technique pour vous offrir un service complet à un seul endroit.',
             paragraph2: 'Notre priorité est la transparence des prix, le soin apporté aux travaux et le respect strict des délais convenus.'
+        },
+        it: {
+            title: 'Chi siamo',
+            subtitle: 'Forniamo servizi domestici e di riparazione di alta qualità dal 2020.',
+            paragraph1: 'Abbiamo riunito specialisti in pulizie, finiture ed edilizia per offrire un servizio completo e integrato.',
+            paragraph2: 'La nostra priorità è la trasparenza dei prezzi, la cura in ogni dettaglio e il rispetto rigoroso dei tempi concordati.'
         }
     };
 

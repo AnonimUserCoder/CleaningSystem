@@ -17,11 +17,24 @@ function getCategoryBadge(category, lang = 'ru') {
             'furniture': { label: 'Meubles', class: 'badge-montage' },
             'restoration': { label: 'Restauration', class: 'badge-repair' },
             'relocation': { label: 'Déménagement', class: 'badge-cleaning' }
+        },
+        it: {
+            'cleaning': { label: 'Pulizia', class: 'badge-cleaning' },
+            'furniture': { label: 'Mobili', class: 'badge-montage' },
+            'restoration': { label: 'Restauro', class: 'badge-repair' },
+            'relocation': { label: 'Trasloco', class: 'badge-cleaning' }
         }
     };
 
     const currentBadges = badges[lang] || badges.ru;
-    const defaultLabel = lang === 'fr' ? 'Service' : (lang === 'en' ? 'Service' : 'Услуга');
+    
+    const defaultLabels = {
+        ru: 'Услуга',
+        en: 'Service',
+        fr: 'Service',
+        it: 'Servizio'
+    };
+    const defaultLabel = defaultLabels[lang] || defaultLabels.ru;
 
     return currentBadges[category] || { label: defaultLabel, class: 'badge-cleaning' };
 }
@@ -42,7 +55,8 @@ export function renderServiceCard(service) {
     const btnTexts = {
         ru: 'Заказать',
         en: 'Book Now',
-        fr: 'Commander'
+        fr: 'Commander',
+        it: 'Ordina'
     };
     const btnText = btnTexts[currentLang] || btnTexts.ru;
 

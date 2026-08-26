@@ -28,6 +28,14 @@ export function renderHeader() {
             prices: 'Tarifs',
             about: 'À propos',
             btnRequest: 'Demander un devis'
+        },
+        it: {
+            home: 'Home',
+            services: 'Servizi',
+            portfolio: 'Portfolio',
+            prices: 'Prezzi',
+            about: 'Chi siamo',
+            btnRequest: 'Richiedi un servizio'
         }
     };
 
@@ -58,9 +66,10 @@ export function renderHeader() {
                         display: inline-block;
                         z-index: 999;
                     ">
-                        <option value="ru" ${currentLang === 'ru' ? 'selected' : ''}>RU</option>
-                        <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
                         <option value="fr" ${currentLang === 'fr' ? 'selected' : ''}>FR</option>
+                        <option value="en" ${currentLang === 'en' ? 'selected' : ''}>EN</option>
+                        <option value="it" ${currentLang === 'it' ? 'selected' : ''}>IT</option>
+                        <option value="ru" ${currentLang === 'ru' ? 'selected' : ''}>RU</option>
                     </select>
                 </nav>
             </div>

@@ -163,6 +163,60 @@ export function renderPrices() {
                 '✓ Préparation des locaux: <strong>sur devis</strong>',
                 '✓ Nettoyage après déménagement: <strong>à partir de 150 €</strong>'
             ]
+        },
+        it: {
+            title: 'Servizi e prezzi indicativi',
+            subtitle: 'I prezzi sono indicativi e possono variare in base alla complessità del lavoro, alle dimensioni del locale e al volume dei servizi.',
+            btnOrder: 'Prenota',
+            popularBadge: 'Popolare',
+
+            cleaningTitle: 'Pulizia & Sanificazione',
+            cleaningPrice: 'da 30 €/ora',
+            cleaningList: [
+                '✓ Pulizia ordinaria: <strong>30-35 €/ora</strong>',
+                '✓ Pulizia generale: <strong>35-45 €/ora</strong>',
+                '✓ Pulizia profonda: <strong>40-50 €/ora</strong>',
+                '✓ Pulizia post-ristrutturazione: <strong>4-10 €/m²</strong>',
+                '✓ Pulizia post-trasloco: <strong>da 150 €</strong>',
+                '✓ Pulizia pre-consegna/fine locazione: <strong>da 150 €</strong>',
+                '✓ Pulizia uffici: <strong>25-35 €/ora</strong>',
+                '✓ Lavaggio finestre: <strong>3-6 €/finestra (30-45 €/ora)</strong>',
+                '✓ Balcone / terrazza: <strong>da 30-80 €</strong>'
+            ],
+
+            furnitureTitle: 'Montaggio & Smontaggio Mobili',
+            furniturePrice: 'da 20 €',
+            furnitureList: [
+                '✓ Montaggio sedia: <strong>da 20 €</strong>',
+                '✓ Montaggio tavolo piccolo: <strong>da 30-50 €</strong>',
+                '✓ Montaggio cassettiera: <strong>da 40-70 €</strong>',
+                '✓ Montaggio letto: <strong>da 50-80 €</strong>',
+                '✓ Montaggio armadio: <strong>da 80-200 €</strong>',
+                '✓ Armadio grande / cabina armadio: <strong>su preventivo</strong>',
+                '✓ Smontaggio mobili: <strong>da 30-100 €</strong>',
+                '✓ Montaggio/smontaggio per trasloco: <strong>30-40 €/ora</strong>'
+            ],
+
+            restorationTitle: 'Restauro Decorazioni',
+            restorationPrice: 'da 30 €',
+            restorationList: [
+                '✓ Vaso piccolo / portavaso: <strong>da 30-50 €</strong>',
+                '✓ Vaso decorativo medio: <strong>da 50-100 €</strong>',
+                '✓ Scultura piccola: <strong>da 80-150 €</strong>',
+                '✓ Scultura grande da giardino/interno: <strong>da 150 €</strong>',
+                '✓ Gesso, ceramica: <strong>su preventivo</strong>',
+                '✓ Pulizia e rinnovo decorazioni: <strong>su preventivo</strong>'
+            ],
+
+            relocationTitle: 'Assistenza al Trasloco',
+            relocationPrice: 'da 30 €/ora',
+            relocationList: [
+                '✓ Assistenza al trasloco: <strong>30-40 €/ora</strong>',
+                '✓ Montaggio e smontaggio mobili: <strong>da 35 €/ora</strong>',
+                '✓ Imballaggio effetti personali: <strong>su preventivo</strong>',
+                '✓ Preparazione locali: <strong>su preventivo</strong>',
+                '✓ Pulizia post-trasloco: <strong>da 150 €</strong>'
+            ]
         }
     };
 
